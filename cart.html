@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Card Shop</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="images/logo.png">
+
+</head>
+
+<body>
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <header class="content">
+    <div class="container">
+      <div class="row">
+        <div class="four columns">
+          <h1><a class="logo" href="index.html"><img src="/images/logo.png" alt="Logo de yu-gi-oh" width="100"
+                height="50"></a><br>Card Shop</h1>
+        </div>
+        <div class="two columns u-pull-right">
+          <ul>
+            <li class="submenu animate__animated animate__fadeInDown">
+              <img class="cart-img" src="images/cart.png" alt="carrito">
+              <div id="cart">
+                <button class="empty button-primary">Your cart is empty</button>
+                <table class="u-full-width table">
+                  <tbody>
+                  </tbody>
+                </table>
+                <a href="#" class="button" id="button-empty">Empty cart</a>
+                <a href="#modal1" class="button" id="button-buy">Buy</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+  <main class="flex animate__animated animate__fadeInDown" style="width: auto; margin: auto auto;">
+    <div class="cards">
+    </div>
+  </main>
+
+  <div id="modal1" class="modalmask">
+    <div class="modalbox movedown">
+      <a href="#close" title="Close" class="close">X</a>
+      <h2>Thanks for your purchase</h2>
+    </div>
+  </div>
+
+
+  <template id="template-cards">
+    <section class="four columns">
+      <div class="card">
+        <img src="/images/card1.jpg" alt="Denim Jeans">
+        <h3>Night Dragolich</h3>
+        <p class="price">$ <span>19.99</span></p>
+        <button data-id="1">Add to Cart</button>
+      </div>
+    </section>
+  </template>
+
+  <template id="template-cart">
+    <tr>
+      <td><img src="images/card1.jpg" width="100"></td>
+      <td>
+        <h5>Night Dragolich</h5>
+      </td>
+      <td>$ <span>15</span></td>
+      <td><input class="input" type="number" value="1" data-id="1"></td>
+      <td><a href="#" class="delete-card">X</a></td>
+    </tr>
+  </template>
+
+  <script src="js/cart.js" type="module"></script>
+
+
+  <!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+
+</html>

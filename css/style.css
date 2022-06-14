@@ -1,0 +1,521 @@
+:root {
+    --primary-color: #6e0e1d;
+    --modal-color: rgba(110, 14, 29, 0.8);
+    --buy-color: hsl(127, 87%, 63%);
+    --empty-color: hsl(0, 100%, 51%);
+    --flex-color: #f6f6f6;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Raleway", sans-serif;
+    background-color: #fff;
+    height: 100vh;
+    margin: 0;
+}
+
+body::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 4px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background: #b3b3b3;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+body::-webkit-scrollbar-thumb:active {
+    background-color: #999999;
+}
+
+body::-webkit-scrollbar-track {
+    background: #e1e1e1;
+    border-radius: 4px;
+}
+
+body::-webkit-scrollbar-track:hover,
+.container::-webkit-scrollbar-track:active {
+    background: #d4d4d4;
+}
+
+
+/* -------Header Index-------- */
+
+body.fixed-nav .content {
+    position: fixed;
+    box-shadow: 0 1px 2px rgb(0 0 0 / 20%);
+}
+
+.content {
+    padding: 15px 0 0 0;
+    background-color: var(--primary-color);
+    color: #fff;
+    text-align: center;
+    margin-bottom: 4em;
+    top: 0;
+    position: relative;
+    width: 100%;
+    z-index: 5;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+}
+
+.container ul.nav {
+    display: block;
+    position: absolute;
+    top: 8.5em;
+    left: 0;
+    background-color: var(--modal-color);
+    opacity: 0.9;
+    padding: 30px;
+    transform: translateX(-400px);
+    transition: 1s;
+    height: 100vh;
+    padding: 2.5em;
+}
+
+.container ul.nav.show {
+    transform: translateX(-20px);
+}
+
+.nav li {
+    color: #fff;
+    cursor: pointer;
+    font-size: 1em;
+    padding-left: 1.2em;
+}
+
+.nav li a {
+    color: #fff;
+    transition: all 1s;
+    text-decoration: none;
+}
+
+.menu-bar {
+    position: absolute;
+    right: 1em;
+    top: 0;
+    font-size: 2em;
+    cursor: pointer;
+}
+
+
+/* --------Main Index-------- */
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--primary-color);
+    padding: 2em;
+}
+
+.section {
+    padding-bottom: 1em;
+}
+
+.section h1 {
+    margin-bottom: 0;
+    opacity: 0.8;
+}
+
+.section p {
+    font-family: "Raleway", sans-serif;
+    padding: 1em;
+    font-size: 1.1em;
+    opacity: 0.8;
+    margin-bottom: 0;
+}
+
+[id] {
+    scroll-margin-top: 20ex;
+}
+
+h1 {
+    text-align: center;
+}
+
+
+/* -------Header Cart--------*/
+
+h5 {
+    font-size: 1em;
+}
+
+ul {
+    list-style: none;
+}
+
+.submenu {
+    position: relative;
+}
+
+.submenu:hover #cart {
+    display: block;
+}
+
+.submenu #cart {
+    position: absolute;
+    top: 100%;
+    right: 7%;
+    display: none;
+    background-color: var(--primary-color);
+    transition: 4ms;
+    z-index: 5;
+    padding: 1em;
+    border: 1px solid #000;
+    border-radius: 0.5em;
+    transition: color 0.8s ease-in 0.2s;
+    width: 76%;
+}
+
+.submenu .button {
+    border-color: #fff;
+}
+
+.submenu .input {
+    width: 60px;
+    height: 50px;
+    color: #000;
+    margin-top: 12px;
+}
+
+.empty {
+    margin: 0 auto;
+    width: 100%;
+    font-size: 1em;
+}
+
+.button {
+    opacity: 0.5;
+}
+
+.button:hover {
+    opacity: 1;
+}
+
+.cart-img {
+    margin-top: 10px;
+}
+
+#cart #button-empty {
+    color: #fff;
+    background-color: var(--empty-color);
+    width: 49%;
+    float: left;
+    margin-right: 2px;
+}
+
+#cart #button-buy {
+    color: #fff;
+    background-color: var(--buy-color);
+    width: 49%;
+    float: right;
+}
+
+#cart .delete-card {
+    text-decoration: none;
+    background-color: #fff;
+    padding: 1em;
+    border-radius: 1em;
+    color: var(--primary-color);
+    margin-bottom: 1em;
+}
+
+.table {
+    display: table;
+    border-collapse: collapse;
+}
+
+.table tbody {
+    padding-top: 1em;
+    display: block;
+    overflow: auto;
+    height: 12em;
+}
+
+td {
+    border: none;
+}
+
+tbody::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+    /* display: none;*/
+}
+
+tbody::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 4px;
+}
+
+tbody::-webkit-scrollbar-thumb:hover {
+    background: #b3b3b3;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+tbody::-webkit-scrollbar-thumb:active {
+    background-color: #999999;
+}
+
+tbody::-webkit-scrollbar-track {
+    background: #e1e1e1;
+    border-radius: 4px;
+}
+
+tbody::-webkit-scrollbar-track:hover,
+.container::-webkit-scrollbar-track:active {
+    background: #d4d4d4;
+}
+
+
+/* -------Main Cards--------*/
+
+.flex {
+    max-width: 1400px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: var(--flex-color);
+    padding: 2em;
+    margin-top: 500px;
+}
+
+.card h3 {
+    font-size: 1.4em;
+    margin-top: 1em;
+    font-weight: 700;
+}
+
+.card {
+    box-shadow: 0 4px 8px 2px rgba(0, 0, 0, 0.2);
+    max-width: 250px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 1em;
+    margin-bottom: 2em;
+    border-radius: 0.5em;
+}
+
+img {
+    max-width: 100%;
+}
+
+.card img {
+    margin-top: 0.5em;
+    transition: width 2s, height 2s, transform 2s;
+}
+
+.card img:hover {
+    transform: scale(1.09);
+}
+
+.price {
+    color: #737373;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.card button {
+    border: none;
+    outline: 0;
+    color: #fff;
+    background-color: var(--primary-color);
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
+}
+
+.card button:hover {
+    opacity: 0.7;
+}
+
+section .four .columns {
+    margin-left: 0;
+}
+
+.column,
+.columns {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+
+/* -------Modal Cart------- */
+
+.modalmask {
+    position: fixed;
+    font-family: Arial, sans-serif;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    z-index: 99999;
+    opacity: 0;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    pointer-events: none;
+}
+
+.movedown {
+    margin: 0 auto;
+}
+
+.modalmask:target {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modalmask:target .movedown {
+    margin: 60% auto;
+}
+
+.modalbox {
+    width: 50%;
+    position: relative;
+    padding: 1em 5em 2em 5em;
+    background: var(--modal-color);
+    border-radius: 5%;
+    -webkit-transition: all 500ms ease-in;
+    -moz-transition: all 500ms ease-in;
+    transition: all 500ms ease-in;
+}
+
+.close {
+    background: #606061;
+    color: #ffffff;
+    line-height: 25px;
+    position: absolute;
+    right: 1px;
+    text-align: center;
+    top: 1px;
+    width: 24px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 3px;
+}
+
+.close:hover {
+    background: #faac58;
+    color: #222;
+}
+
+@media (min-width: 280px) {
+    .table {
+        width: 380px;
+    }
+}
+
+@media (min-width: 550px) {
+    .four.columns {
+        width: 48%;
+    }
+    .submenu #cart {
+        width: auto;
+        right: 5%;
+    }
+    .container ul.nav {
+        top: 9.5em;
+    }
+    .card {
+        margin-right: 1em;
+        flex: 0 1 100%;
+    }
+    .card button {
+        font-size: 1em;
+    }
+    .card h3 {
+        font-size: 1.2em;
+    }
+}
+
+@media (min-width: 750px) {
+    .content {
+        text-align: left;
+    }
+    .section {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        color: var(--primary-color);
+        margin-bottom: 1em;
+    }
+    .section img {
+        width: 50%;
+        padding: 0.8em;
+    }
+    .card h3 {
+        font-size: 1.1em;
+    }
+    .table {
+        width: 550px;
+    }
+    .modalmask:target .movedown {
+        margin: 20% auto;
+    }
+    .modalbox {
+        width: 70%;
+    }
+}
+
+@media (min-width: 1000px) {
+    .four.columns {
+        width: 30.6666666667%;
+    }
+    .menu-bar {
+        display: none;
+        position: absolute;
+        right: 0;
+        top: 0;
+        font-size: 2em;
+        cursor: pointer;
+    }
+    .container ul.nav {
+        display: inline-flex;
+        transform: translate(0);
+        position: static;
+        height: 5vh;
+    }
+    .nav li a:hover {
+        background-color: #ed7b8d;
+        border-radius: 0.3em;
+        padding: 0.1rem;
+    }
+    .section p {
+        font-size: 1.5em;
+    }
+    .section img {
+        padding: 1em;
+    }
+    .cart-img {
+        margin-top: 40px;
+    }
+    .card h3 {
+        font-size: 1em;
+    }
+    .submenu #cart {
+        right: -15%;
+    }
+    .modalmask:target .movedown {
+        margin: 15% auto;
+    }
+    .modalbox {
+        width: 30%;
+    }
+}
